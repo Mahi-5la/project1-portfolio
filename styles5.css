@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(45deg,#522258,#8C3061,#C63C51,#D95F59);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.img1 {
+            position:relative;
+            left: 95%;  /* Adjust the value as needed */
+            top: 10px; /* Adjust if you want it to be at the bottom corner, or use top if needed */
+            width: 30px;
+            height: 30px;
+        }
+
+#head{
+    font-weight: lighter;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 0;
+
+   }
+
+   .media{
+    position:absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-53%, -50%);
+   }
+
+li{
+    list-style: none;
+    margin: 10px 15px;
+    display:inline-block;
+    font-size: 20px;
+    padding: 5px 8px;
+    border-radius:  50%;
+    transition: .5s
+}
+li{
+    transition: .5s;
+}
+.media li img:hover, .media li img:focus{
+     transform: scale(1.1);
+}
+
+.container2{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container form{
+    width: 670px;
+    height:400px;
+    display:flex;
+    justify-content: center;
+    box-shadow:  20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius:15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.container2 form h1{
+    color: #fff;
+    font-weight: 500;
+    margin-top:  20px;
+    width:500px;
+    text-align: center;
+}
+
+.container2 form input{
+    width:290px;
+    height:40px;
+    padding-left: 10px;
+    outline: none;
+    border:none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #9c8b8b;
+}
+
+.container2 form input::placeholder {
+    color: #3a3636;
+
+}
+.container2 form #lastName,
+.container2 form #mobile{
+    margin-left:20px;
+}
+
+.container2 form h4{
+    color: #fff;
+    font-weight: 300;
+    width:600px;
+    margin-top: 20px;
+}
+
+.container2 form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff ;
+    color:#fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding:10px;
+    outline : none;
+    min-width: 600px;
+    max-width: 600px ;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea ::-webkit-scrollbar{
+    width:1em;
+}
+
+textarea ::-webkit-scrollbar-thumb{
+    background-color: rgba(194, 194, 194, 713);
+}
+
+.container2 form #botton{
+    border:none;
+    background:#fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color:#333;
+    width: 100px;
+    padding:  0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.container2 form  #botton :hover{
+    opacity:0.7;
+}
