@@ -93,9 +93,9 @@ to {
 }
 nav {
   width: 100%;
-  padding: 10px;
+  padding: 2px;
   display: flex;
-  align-items: center;
+  align-items: right;
   font-family: "sans-serif";
 }
 
