@@ -264,6 +264,9 @@ nav {
   position: relative;
   flex: 2;
 }
+.nav-item{
+  width:100%;
+}
 .nav-item:nth-child(1) {
   text-align: right;
 }
