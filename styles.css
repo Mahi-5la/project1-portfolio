@@ -14,7 +14,8 @@
   src: url(font1.ttf.ttf);
 }
 
-html, body {
+html,
+body {
   font-family: myFont;
   background-color: #522258;
   overflow-x: hidden;
@@ -93,47 +94,126 @@ nav {
   width: 100%;
   padding: 15px; 
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; 
   font-family: "sans-serif";
-}
-
-
-
-.nav-right {
-  display: flex;
-  align-items: center;
+  position: fixed; /* Make sure the nav stays in place */
+  top: 0;
+  right: 0;
+  z-index: 10; /* Ensure it is above other content */
 }
 
 .nav-item {
-  margin-right: 15px;
+  margin-right: 15px; 
 }
 
 #logo a {
-  margin-right: 50px; 
+  text-decoration: none; /* Remove underline */
+  text-transform: uppercase;
+  color: #000000; /* Black text color */
 }
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: black;
 }
 
-/* Media Query for Small Screens (max-width: 600px) */
+.hero {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+.h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(14, 15, 15);
+  font-family: myFONT;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+h1 {
+  position: relative;
+  font-weight: 400;
+  line-height: 85%;
+}
+
+h1 span {
+  font-family: myFont1;
+  font-weight: 700;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  right: 5px;
+  display: flex;
+  justify-content: flex-end;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+footer .item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: inline-block;
+}
+
+footer .item img {
+  width: 60px; /* Adjust size as needed */
+  height: 50px;
+  border-radius: 8px; /* Optional: rounded corners */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+footer .item:hover img {
+  transform: scale(1.1); 
+  opacity: 0.8; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  animation: fadeIn 1s ease-out;
+}
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
 @media (max-width: 600px) {
-  nav {
-    flex-wrap: nowrap; /* Prevents wrapping of items */
-    justify-content: flex-end; /* Keeps items on the right */
-    padding: 10px;
+  .loader-imgs {
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
   }
 
-  .nav-right {
-    flex-wrap: nowrap; /* Ensures items stay in a single line */
-    gap: 5px; /* Adjusts spacing between items */
+  nav {
+    width: 100%;
+    padding: 10px;
+    flex-direction: row; /* Ensure nav items stay on a single line */
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
   }
 
   .nav-item {
-    margin-right: 5px; /* Less margin for smaller screens */
+    margin-right: 15px; 
   }
 
   footer .item img {
