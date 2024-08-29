@@ -14,8 +14,7 @@
   src: url(font1.ttf.ttf);
 }
 
-html,
-body {
+html, body {
   font-family: myFont;
   background-color: #522258;
   overflow-x: hidden;
@@ -37,11 +36,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  gap: 10px;
+  gap: 40px;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
-
-
 
 #loader-logo {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -71,6 +68,7 @@ img {
   color: #1c1111; 
   font-weight: bold; 
 }
+
 .center-image {
   position: absolute;
   top: 50%;
@@ -82,132 +80,14 @@ img {
   object-fit: contain; 
 }
 
-
 @keyframes scrollText {
-from {
-  left: 100%;
-  }
-to {
-  left: -100%;
-  }
-}
-nav {
-  width: 100%;
-  padding: 2px;
-  display: flex;
-  align-items: right;
-  font-family: "sans-serif";
-}
-
-.nav-item {
-  position: relative;
-  flex: 1;
-}
-.nav-item:nth-child(1) {
-  text-align: right;
-}
-.nav-item:nth-child(2) {
-  text-align: right;
-}
-
-.nav-item:nth-child(3) {
-  text-align: right;
-}
-
-.nav-item:nth-child(4) {
-  text-align: right;
-}
-
-#logo a {
-  text-transform: none;
-}
-
-a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.hero {
-  width: 100%;
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
-  text-transform: uppercase;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 400;
-}
-
-.h1 {
-  width: 100%;
-  text-align: center;
-  font-size: 3rem;
-  color: rgb(14, 15, 15);
-  font-family: myFONT;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-h1 {
-  position: relative;
-  font-weight: 400;
-  line-height: 85%;
-}
-
-h1 span {
-  font-family: myFont1;
-  font-weight: 700;
-}
-
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 30px;
-  right: 5px;
-  display: flex;
-  justify-content: flex-end;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-footer .item {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  display: inline-block;
-}
-
-footer .item img {
-  width: 60px; /* Adjust size as needed */
-  height: 50px;
-  border-radius: 8px; /* Optional: rounded corners */
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-
-footer .item:hover img {
-  transform: scale(1.1); 
-  opacity: 0.8; 
-}
-
-
-@keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    left: 100%;
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    left: -100%;
   }
 }
-
-footer {
-  animation: fadeIn 1s ease-out;
-}
-
-.item {
-  position: relative;
-  width: 100px;
-  height: 100px;
-}
-
 
 nav {
   width: 100%;
@@ -236,66 +116,69 @@ nav {
   margin-right: 15px; 
 }
 
-@media (max-width: 600px) {
-  .loader-imgs {
-  width: 150%;
+footer {
+  width: 100%;
   position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-50%, -50%);
+  bottom: 30px;
+  right: 5px;
   display: flex;
-  gap: 10px;
+  justify-content: flex-end;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-#loader-logo {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
- 
-}
-nav {
-  width: 50%;
-  padding:20px;
-  
-  align-items: left;
-  font-family: "sans-serif";
-}
-  #log a{
-    left: 40%;
-    gap: 10px;
-    
-  }
-
-.nav-item {
-  position: relative;
-  flex: 2;
-}
-.nav-item{
-  width:100%;
-}
-.nav-item:nth-child(1) {
-  text-align: right;
-}
-
-.nav-item:nth-child(2) {
-  text-align: right;
-}
-
-.nav-item:nth-child(3) {
-  text-align: right;
-}
-.nav-item:nth-child(4) {
-  text-align: right;
+footer .item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: inline-block;
 }
 
 footer .item img {
-  width: 100px; 
-  height: 80px;
-
+  width: 60px;
+  height: 50px;
+  border-radius: 8px;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  justify-content: left;
-  object-fit: contain; 
 }
 
+footer .item:hover img {
+  transform: scale(1.1); 
+  opacity: 0.8; 
 }
 
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
 
+/* Media Query for Small Screens (max-width: 600px) */
+@media (max-width: 600px) {
+  .loader-imgs {
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+  }
+
+  nav {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-item {
+    margin: 0;
+  }
+
+  footer .item img {
+    width: 80px; 
+    height: 60px;
+  }
+}
