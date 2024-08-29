@@ -41,6 +41,8 @@ body {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
+
+
 #loader-logo {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -69,7 +71,6 @@ img {
   color: #1c1111; 
   font-weight: bold; 
 }
-
 .center-image {
   position: absolute;
   top: 50%;
@@ -81,40 +82,50 @@ img {
   object-fit: contain; 
 }
 
+
 @keyframes scrollText {
-  from {
-    left: 100%;
+from {
+  left: 100%;
   }
-  to {
-    left: -100%;
+to {
+  left: -100%;
   }
 }
-
 nav {
   width: 100%;
-  padding: 15px; 
+  padding: 10px;
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
-  align-items: center; 
+  align-items: center;
   font-family: "sans-serif";
-  position: fixed; /* Make sure the nav stays in place */
-  top: 0;
-  right: 0;
-  z-index: 10; /* Ensure it is above other content */
 }
 
 .nav-item {
-  margin-right: 15px; 
+  position: relative;
+  flex: 1;
+}
+.nav-item:nth-child(1) {
+  text-align: right;
+}
+.nav-item:nth-child(2) {
+  text-align: right;
+}
+
+.nav-item:nth-child(3) {
+  text-align: right;
+}
+
+.nav-item:nth-child(4) {
+  text-align: right;
 }
 
 #logo a {
-  text-decoration: none; /* Remove underline */
-  text-transform: uppercase;
-  color: #000000; /* Black text color */
+  text-transform: none;
 }
 
 a {
   text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .hero {
@@ -169,10 +180,12 @@ footer .item img {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+
 footer .item:hover img {
   transform: scale(1.1); 
   opacity: 0.8; 
 }
+
 
 @keyframes fadeIn {
   from {
@@ -195,29 +208,84 @@ footer {
   height: 100px;
 }
 
+
+nav {
+  width: 100%;
+  padding: 15px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  font-family: "sans-serif";
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 15px; 
+}
+
+#logo a {
+  margin-right: 15px; 
+}
+
 @media (max-width: 600px) {
   .loader-imgs {
-    width: 100%;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    gap: 10px;
-  }
+  width: 150%;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
 
-  nav {
-    width: 100%;
-    padding: 10px;
-    flex-direction: row; /* Ensure nav items stay on a single line */
-    align-items: center;
-    justify-content: flex-end; /* Align items to the right */
-  }
+#loader-logo {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+ 
+}
+nav {
+  width: 50%;
+  padding:20px;
+  
+  align-items: left;
+  font-family: "sans-serif";
+}
 
-  .nav-item {
-    margin-right: 15px; 
-  }
+.nav-item {
+  position: relative;
+  flex: 2;
+}
+.nav-item:nth-child(1) {
+  text-align: right;
+}
 
-  footer .item img {
-    width: 80px; 
-    height: 60px;
-  }
+.nav-item:nth-child(2) {
+  text-align: right;
+}
+
+.nav-item:nth-child(3) {
+  text-align: right;
+}
+.nav-item:nth-child(4) {
+  text-align: right;
+}
+
+footer .item img {
+  width: 150px; 
+  height: 80px;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  justify-content: left;
+  object-fit: contain; 
+}
+
 }
