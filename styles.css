@@ -98,14 +98,12 @@ nav {
   font-family: "sans-serif";
 }
 
-.nav-left {
-  display: flex;
-  align-items: center;
-}
+
 
 .nav-right {
   display: flex;
-  align-items: center;
+  align-items: rigth;
+  padding-left: 50%;
 }
 
 .nav-item {
