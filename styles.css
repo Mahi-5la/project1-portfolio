@@ -259,6 +259,11 @@ nav {
   align-items: left;
   font-family: "sans-serif";
 }
+  #log a{
+    left: 40%;
+    gap: 10px;
+    
+  }
 
 .nav-item {
   position: relative;
