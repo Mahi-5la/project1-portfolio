@@ -102,8 +102,7 @@ nav {
 
 .nav-right {
   display: flex;
-  align-items: rigth;
-  padding-left: 50%;
+  align-items: center;
 }
 
 .nav-item {
@@ -111,7 +110,7 @@ nav {
 }
 
 #logo a {
-  margin-right: 15px; 
+  margin-right: 50px; 
 }
 
 a {
